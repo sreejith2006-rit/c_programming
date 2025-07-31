@@ -44,6 +44,7 @@ void deQueue()
         if (f > r)
         {
             f = -1;
+            r=-1;
             printf("Queue is Empty\n");
         }
         else
