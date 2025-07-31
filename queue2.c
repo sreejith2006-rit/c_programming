@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define size 5
 int queue[size];
 int f = -1;
@@ -43,6 +44,7 @@ void deQueue()
         if (f > r)
         {
             f = -1;
+            printf("Queue is Empty\n");
         }
         else
         {
@@ -52,9 +54,13 @@ void deQueue()
 }
 void display()
 {
-    for (int i = f; i <= r; i++)
+    if (!isEmpty())
     {
-        printf("%d ", queue[i]);
+        for (int i = f; i <= r; i++)
+        {
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
     }
 }
 int main()
@@ -83,6 +89,8 @@ int main()
         case 3:
             display();
             break;
+        case 4:
+            exit(1);
         default:
             break;
         }
