@@ -23,7 +23,7 @@ void enQueue(int item)
 {
     if (isFull())
     {
-        printf("Queue is already full");
+        printf("Queue is already full\n");
     }
     else
     {
@@ -36,7 +36,7 @@ void deQueue()
 {
     if (isEmpty())
     {
-        printf("Queue is Empty");
+        printf("Queue is Empty\n");
     }
     else
     {
@@ -46,7 +46,7 @@ void deQueue()
         }
         else
         {
-            printf("Element Removed :%d", queue[f++]);
+            printf("Element Removed :%d\n", queue[f++]);
         }
     }
 }
