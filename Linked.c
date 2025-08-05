@@ -60,6 +60,7 @@ void insertpos(node *head, int data, int pos)
     temp->link = ptr->link;
     ptr->link = temp;
 }
+
 int main()
 {
     node *head = NULL;
@@ -78,6 +79,5 @@ int main()
     head = insertbegin(head, 40);
     insertpos(head, 51, 4);
     print(head);
-
     return 0;
 }
